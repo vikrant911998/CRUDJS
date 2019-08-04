@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="./scripts/crud/model/customer.js"></script>
+    <script src="./scripts/crud/model/customeroperations.js"></script>
+    <script src="./scripts/crud/controller/customercontroller.js"></script>
+</head>
+
+<body>
+    <div class="container jumbotron">
+        <h1 class="text-center">CRUD PAGE</h1>
+        <br><br>
+        <input type="text" id="id" class="form-control" placeholder="Enter the Customer ID" >
+        <br>
+        <input type="text" id="username" class="form-control" placeholder="Enter the username">
+        <br>
+        <input type="password" id="pwd" class="form-control" placeholder="Enter the password">
+
+        <br>
+        <button class="btn btn-success" id="add">ADD</button>
+        <button class="btn btn-primary" id="load">LOAD</button>
+        <button class="btn btn-info" id="save">SAVE</button>
+        <br><br><br>
+
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>USERNAME</th>
+                    <th>PASSWORD</th>
+                </tr>
+            </thead>
+            <tbody id="customers">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
