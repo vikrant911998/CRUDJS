@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #bg{
+            z-index: -100;
+            position: absolute;
+        }
+        #login{
+            width: 50%;
+            position: absolute;
+            z-index: 10;
+            top: 25%;
+            right: 26%;
+            background-color: rgba(205, 13, 118, 0.735);
+        }
+        .heading{
+            color: white;
+            font-size: 70px;
+            background-color: rgb(238, 141, 23, 0.89);
+        }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="./scripts/utils/firebase.js"></script>
+    <script src="./scripts/register.js"></script>
+</head>
+<body>
+    <img id="bg" src="https://images.pexels.com/photos/7095/people-coffee-notes-tea.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid" alt="Responsive image">
+    <div class="container">
+        <strong><p class="text-center heading rounded">TEST PROJECT</p></strong>
+        <div class="form-group jumbotron" id="login">
+            <h1 class="alert-primary text-center rounded">Register</h1>
+            <br>
+            <input type="text" id="nm" class="form-control" placeholder="Enter Name">
+            <br>
+            <input type="number" id="mobile" class="form-control" placeholder="Enter Phone Number">
+            <br>
+            <input type="text" id="usrid" class="form-control" placeholder="Enter Username">
+            <br>
+            <input type="password" id="pwd" class="form-control" placeholder="Enter Password">
+            <br>
+            <button class="btn btn-primary" id="register">SUBMIT</button>
+            <a href="home.html" class="btn btn-success" role="button">LOGIN</a>
+        </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .bg{
+            background-color: rgba(242, 168, 41, 0.899);
+            /* background-color: rgba(176, 220, 244, 0.899); */
+        }
+        .hrheight{
+            height: 5px;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blueviolet;
+        }
+        img{
+            height: 200px;
+            width : 180px;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        if(!JSON.parse(localStorage.isCustomerLogin)){
+            location.href="home.html";
+        }
+    </script>
+    <script src="./scripts/products/model/product.js"></script>
+    <script src="./scripts/products/model/productoperations.js"></script>
+    <script src="./scripts/products/controller/productcontroller.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="alert-primary text-center rounded bg">Dashboard</h1>
+        <hr class="hrheight" color="skyblue">
+        <br>
+        <a href="home.html" class="btn btn-danger float-right" id="logout" role="button">Log Out</a>
+        <a href="feedback.html" class="btn btn-info float-right mr-2" role="button">Feedback</a>
+        <a href="cart.html" class="float-left">
+            <button class="btn btn-warning" id="view_cart">View Cart</button>
+            <span id="count"></span>
+        </a>&nbsp;
+        <br>
+        
+        <br>
+        <br>
+        <div id="product_list">
+
+        </div>
+
+    </div>
+</body>
+</html>

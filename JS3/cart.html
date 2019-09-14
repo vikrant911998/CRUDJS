@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <style>
+        .bg{
+            background-color: #55efc4;
+            /* background-color: rgba(176, 220, 244, 0.899); */
+        }
+        .hrheight{
+            height: 5px;
+        }
+        p{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: blueviolet;
+        }
+        img{
+            height: 200px;
+            width : 180px;
+        }
+    </style>
+    <script>
+        if(!JSON.parse(localStorage.isCustomerLogin)){
+            location.href="home.html";
+        }
+    </script>
+    <script src="./scripts/products/model/product.js"></script>
+    <script src="./scripts/products/model/productoperations.js"></script>
+    <script src="./scripts/cart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="alert-primary text-center bg rounded">CART</h1>
+        <hr class="hrheight" color="skyblue">
+        <br>
+        <a href="dashboard.html" role="button"  class="float-left btn btn-primary">Dashboard</a>
+        <a href="home.html" role="button" id="logout" class="float-right btn btn-danger ">
+            Log Out
+        </a>
+        &nbsp; 
+        <a href="payment.html" role="button" id="total" class="float-right btn btn-success"></a>
+        <br><br>
+        <div id="cart_list">
+
+        </div>
+    </div>
+</body>
+</html>

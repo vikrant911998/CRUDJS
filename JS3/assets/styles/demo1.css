@@ -1,0 +1,29 @@
+.bg{
+    position: absolute;
+    z-index: -100;
+}
+
+#header ul{
+    list-style: none;
+  
+}
+
+#header ul li a:hover{
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid white;
+}
+.white{
+    color: white;
+}
+
+#content{
+    width: 30%;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+}
+.btncolor{
+   background-color:  #EE575D;
+}
+
